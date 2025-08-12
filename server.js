@@ -11,9 +11,12 @@ const JWT_SECRET = process.env.JWT_SECRET || "your_jwt_secret";
 const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/expense_tracker";
 
 // Connect to MongoDB
+
 mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  retryWrites: true,
+  w: 'majority'
 })
 .then(() => console.log("Connected to MongoDB"))
 .catch(err => console.error("MongoDB connection error:", err));
