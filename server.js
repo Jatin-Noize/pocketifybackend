@@ -8,7 +8,7 @@ const mongoose = require("mongoose");
 const app = express();
 const PORT = process.env.PORT || 5000;
 const JWT_SECRET = process.env.JWT_SECRET || "your_jwt_secret"; // replace in prod
-const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/expense_tracker";
+const MONGO_URI = process.env.MONGO_URI || "mongodb+srv://jayveer282004_db_user:EVvdKuxYpOalS92m@cluster0.vwoml2c.mongodb.net/?appName=Cluster0";
 const SALT_ROUNDS = 10;
 
 // Connect to MongoDB
